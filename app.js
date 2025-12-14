@@ -1,4 +1,24 @@
-function signUp(){
+// function signUp(){
+//     var email = document.getElementById("email").value
+//     var password = document.getElementById("password").value
+
+//     if (email== "" || password== "") {
+//         alert("Enter Email or password")
+        
+//     }
+//     else{
+//         const auth = firebase.auth();
+//         auth.createUserWithEmailAndPassword(email,password)
+//         .then( (userdata) => {
+//             console.log(userdata.user.uid)
+//         } )
+//         .catch( (e) => {
+//             console.log(e)
+//         });
+//     }
+// }
+
+function login(){
     var email = document.getElementById("email").value
     var password = document.getElementById("password").value
 
@@ -8,7 +28,7 @@ function signUp(){
     }
     else{
         const auth = firebase.auth();
-        auth.createUserWithEmailAndPassword(email,password)
+        auth.signInWithEmailAndPassword(email,password)
         .then( (userdata) => {
             console.log(userdata.user.uid)
         } )
@@ -17,6 +37,8 @@ function signUp(){
         });
     }
 }
+
+
 
 
 
